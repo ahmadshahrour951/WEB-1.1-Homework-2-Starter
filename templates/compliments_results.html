@@ -4,6 +4,15 @@
     <title>Compliments Results</title>
   </head>
   <body>
-    <!-- Your HTML code goes here! -->
+    <h1>Hey {{users_name}},</h1>
+    <h2>welcome to my compliment generator!</h2>
+    <!-- {{wants_compliments}} {{ num_compliments }} -->
+    {% if wants_compliments == 'yes' %}
+    <ul>
+      {% for compliment in random_compliments %}
+      <li>{{ compliment }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
   </body>
 </html>
